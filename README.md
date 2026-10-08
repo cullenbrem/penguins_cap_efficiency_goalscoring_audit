@@ -17,3 +17,8 @@ Below is the data visualization of the pipeline mapping player cap hit percentag
 
 ![Penguins Cap Efficiency Plot](capefficiency.png)
 
+## Pipeline Implementation
+This pipeline was written in python utilizing the "pandas" library to:
+1. Isolate 5on5 scenario where players impact will be shown without the noise of other situations.
+2. Apply economic standardization formulas over dynamic currency boundaries.
+3. Render a visual model using "matplotlib" and "seaborn".
