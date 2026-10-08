@@ -11,21 +11,29 @@ import pandas as pd
 #import data from puckpedia and moneypuck
 df_cap = pd.read_csv('PenguinsCap.csv')
 df_mp_raw = pd.read_csv('skaters.csv')
+
 #rename cap file columns
 df_cap.columns = ['Player', 'Age', 'Position', '2026_Cap_Hit']
+
 #filter for penguins playersin 2026-27 on 5on5 situations
 df_mp_5on5 = df_mp_raw[df_mp_raw['situation'] == '5on5'].copy()
 df_mp_clean = df_mp_5on5[['name', 'I_F_xGoals','icetime']].copy()
+
 #change the column in moneypuck to Player
 df_mp_clean.rename(columns={'name':'Player'}, inplace=True)
+
 #merge last year player stats by name to this years cap numbers
 df_merged = pd.merge(df_cap, df_mp_clean, on='Player', how='inner')
+
 #find the percentage of cap used by player
 df_merged['Cap_Hit_Percentage'] = (df_merged['2026_Cap_Hit'] / 104000000) * 100
+
 #calculate the economic metric of 5on5 xgoals per 1% of cap space
 df_merged['xG_per_Cap_Percent'] = df_merged['I_F_xGoals'] / df_merged['Cap_Hit_Percentage']
+
 #sort most to least efficient
 df_merged = df_merged.sort_values(by='xG_per_Cap_Percent', ascending=False)
+
 #output final csv
 df_merged.to_csv('penguins_cap_efficiency.csv', index=False)
 
