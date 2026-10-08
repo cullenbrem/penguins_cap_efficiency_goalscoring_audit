@@ -10,4 +10,10 @@ In a hard-cap environment it is imperative for a team to be able to identify pla
 
 ##Key Discoveries
 ***Cost-Controlled Depth*** This model identified Ben Kindel and Justin Brazeau as the two most efficient 5on5 goalscoring rostered players as of their 2026-27 cap hit compared to their 2025-26 metrics.
-***Elite Core*** The visualization maps how legacy players such as Sidney Crosby
+***Elite Core*** The visualization maps how legacy players such as Sidney Crosby and Erik Karlsson use more of the salary cap yet are still efficient in their roles.
+
+##Visualizing the roster
+Below is the data visualization of the pipeline mapping player cap hit percentage against their on-ice metrics.
+
+![Penguins Cap Efficiency Plot](capefficiency.png)
+
