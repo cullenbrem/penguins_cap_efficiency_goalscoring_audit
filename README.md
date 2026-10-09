@@ -1,4 +1,4 @@
-#Pittsburgh Penguins 2026-27 Salary Cap to Individual Expected Goalscoring
+#Pittsburgh Penguins 2026-27 Salary Cap to Individual Expected Goal Scoring
 
 ##Project Overview
 This project builds an analytical data pipeline connecting individual 5on5 scoring in 2025-26 to a players percent cap hit in 2026-27. This model finds surplus value in players who score well above their pay, which is beneficial in the NHL's current CBA with a hard salary cap.
@@ -9,8 +9,11 @@ In a hard-cap environment it is imperative for a team to be able to identify pla
 ***On-Ice Metric*** Sanitized and filtered 5on5 Individual Fenwick Expected Goals from 2025-26 MoneyPuck dataset.
 
 ##Key Discoveries
-***Cost-Controlled Depth*** This model identified Ben Kindel and Justin Brazeau as the two most efficient 5on5 goalscoring rostered players as of their 2026-27 cap hit compared to their 2025-26 metrics.
+***Cost-Controlled Depth*** This model identified Ben Kindel and Justin Brazeau as the two most efficient 5on5 goal scoring rostered players as of their 2026-27 cap hit compared to their 2025-26 metrics.
 ***Elite Core*** The visualization maps how legacy players such as Sidney Crosby and Erik Karlsson use more of the salary cap yet are still efficient in their roles.
+
+##Caveats
+This model reduces players impact to goalscoring and serves to better understand value in terms of expected goals which does not include a player's finishing ability. Also, defensemen are going to inherently contribute less in this model, as a defensemen overall take less shots that are considered high xG. Defensemen instead play a role wherein goal scoring is not the first priority.
 
 ##Visualizing the roster
 Below is the data visualization of the pipeline mapping player cap hit percentage against their on-ice metrics.
